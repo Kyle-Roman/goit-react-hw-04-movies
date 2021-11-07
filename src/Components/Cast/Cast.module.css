@@ -1,0 +1,19 @@
+.container {
+  max-width: 1200px;
+  background-color: rgb(235, 252, 235);
+}
+
+.list {
+  align-items: baseline;
+  justify-content: center;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.listItem {
+  height: 300px;
+  width: 200px;
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 30px;
+}

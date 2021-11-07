@@ -1,7 +1,7 @@
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = 'api_key=a133e5eaa98d9ee882329412325a3096';
 
-async function fetchMovies(url = '') {
+async function fetchMovies(url = "") {
     const res = await fetch(url);
     return res.ok
         ? await res.json()
@@ -21,9 +21,9 @@ export function fetchMovieCredits(movieId) {
 };
 
 export function fetchMovieReviews(movieId) {
-    return fetchMovies(`${BASE_URL}/movie${movieId}/rewievs?${API_KEY}`)
+    return fetchMovies(`${BASE_URL}/movie/${movieId}/reviews?${API_KEY}`)
 };
 
 export function fetchMovieBySerch(search) {
-    return fetchMovies(`${BASE_URL}/search/movie/${API_KEY}&${search}`)
+    return fetchMovies(`${BASE_URL}/search/movie?${API_KEY}&query=${search}`)
 };
